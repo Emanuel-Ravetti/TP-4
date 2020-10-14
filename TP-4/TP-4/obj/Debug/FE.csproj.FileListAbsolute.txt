@@ -1,0 +1,10 @@
+G:\Programación 2020\TP-4\TP-4\TP-4\bin\Debug\TP-4.exe.config
+G:\Programación 2020\TP-4\TP-4\TP-4\bin\Debug\TP-4.exe
+G:\Programación 2020\TP-4\TP-4\TP-4\bin\Debug\TP-4.pdb
+G:\Programación 2020\TP-4\TP-4\TP-4\obj\Debug\FE.csprojAssemblyReference.cache
+G:\Programación 2020\TP-4\TP-4\TP-4\obj\Debug\TP_4.Compra.resources
+G:\Programación 2020\TP-4\TP-4\TP-4\obj\Debug\TP_4.Properties.Resources.resources
+G:\Programación 2020\TP-4\TP-4\TP-4\obj\Debug\FE.csproj.GenerateResource.cache
+G:\Programación 2020\TP-4\TP-4\TP-4\obj\Debug\FE.csproj.CoreCompileInputs.cache
+G:\Programación 2020\TP-4\TP-4\TP-4\obj\Debug\TP-4.exe
+G:\Programación 2020\TP-4\TP-4\TP-4\obj\Debug\TP-4.pdb
