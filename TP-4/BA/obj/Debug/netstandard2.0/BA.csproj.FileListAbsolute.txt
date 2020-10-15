@@ -1,0 +1,9 @@
+G:\Programación 2020\TP-4\TP-4\BA\bin\Debug\netstandard2.0\BA.deps.json
+G:\Programación 2020\TP-4\TP-4\BA\bin\Debug\netstandard2.0\BA.dll
+G:\Programación 2020\TP-4\TP-4\BA\bin\Debug\netstandard2.0\BA.pdb
+G:\Programación 2020\TP-4\TP-4\BA\obj\Debug\netstandard2.0\BA.csprojAssemblyReference.cache
+G:\Programación 2020\TP-4\TP-4\BA\obj\Debug\netstandard2.0\BA.AssemblyInfoInputs.cache
+G:\Programación 2020\TP-4\TP-4\BA\obj\Debug\netstandard2.0\BA.AssemblyInfo.cs
+G:\Programación 2020\TP-4\TP-4\BA\obj\Debug\netstandard2.0\BA.csproj.CoreCompileInputs.cache
+G:\Programación 2020\TP-4\TP-4\BA\obj\Debug\netstandard2.0\BA.dll
+G:\Programación 2020\TP-4\TP-4\BA\obj\Debug\netstandard2.0\BA.pdb

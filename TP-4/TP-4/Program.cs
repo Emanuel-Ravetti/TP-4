@@ -16,7 +16,7 @@ namespace TP_4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Compra());
+            Application.Run(new frmCompra());
         }
     }
 }
