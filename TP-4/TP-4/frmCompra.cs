@@ -56,34 +56,52 @@ namespace TP_4
             {
                 rngPedido.Lechuga = true;
             }
-            else if (cbTomate.Checked == true)
+            if (cbTomate.Checked == true)
             {
                 rngPedido.Tomate = true;
             }
-            else if (cbBacon.Checked==true)
+            if (cbBacon.Checked==true)
             {
                 rngPedido.Bacon = true;
             }
-            else if (cbSalsa.Checked == true)
+            if (cbSalsa.Checked == true)
             {
                 rngPedido.Salsa = true;
             }
-            else if (cbPepino.Checked == true)
+            if (cbPepino.Checked == true)
             {
                 rngPedido.Pepinillos = true;
             }
 
             //seleccion de bebida
-            if (rbCoca.Checked == true || rbFanta.Checked == true || rbSprite.Checked==true)
+            if (rbCoca.Checked == true)
             {
+                rngPedido.Coca = true;
+                rngPedido.Bebida = 60;
+            }
+            else if (rbFanta.Checked == true)
+            {
+                rngPedido.Fanta = true;
+                rngPedido.Bebida = 60;
+            }
+            else if (rbSprite.Checked == true)
+            {
+                rngPedido.Sprite = true;
                 rngPedido.Bebida = 60;
             }
             else if (rbAgua.Checked == true)
             {
-                rngPedido.Bebida = 60;
+                rngPedido.Agua = true;
+                rngPedido.Bebida = 40;
             }
 
+            pedido.AddRngPedido(rngPedido);
+
             txtTotal.Text = rngPedido.Total().ToString();
+
+            MuestraPedidos();
+            //todo: limpiar casillas cuando se ingresa un renglon
+            //calcular el total de todos los pedidos juntos
         }
         #endregion
 
@@ -125,6 +143,11 @@ namespace TP_4
             rbFanta.Checked = false;
             rbSprite.Checked = false;
             rbAgua.Checked = false;
+        }
+
+        private void MuestraPedidos()
+        {
+            lblRenglones.Text = pedido.MuestraPedidos();
         }
 
         #endregion
