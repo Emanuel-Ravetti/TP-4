@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,12 +27,16 @@ namespace TP_4
         #endregion
 
         #region EVENTOS
+
         private void btNuevo_Click(object sender, EventArgs e)
         {
+            this.paPedido.Enabled = true;
+            this.paRenglones.Enabled = true;
+
             LimpiarControles();
             NuevoPedido();
             txtFecha.Text = pedido.Fecha.ToString("dd/MM/yyyy");
-            //show nro pedido
+            //todo: show nro pedido
 
         }
         private void btAceptar_Click(object sender, EventArgs e)
@@ -97,11 +102,16 @@ namespace TP_4
 
             pedido.AddRngPedido(rngPedido);
 
-            txtTotal.Text = rngPedido.Total().ToString();
+            txtTotal.Text = pedido.Total.ToString();
 
             MuestraPedidos();
-            //todo: limpiar casillas cuando se ingresa un renglon
-            //calcular el total de todos los pedidos juntos
+            LimpiarSeleccion();
+
+        }
+        private void btReiniciar_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+            pedido.ReiniciarPedido();
         }
         #endregion
 
@@ -122,6 +132,22 @@ namespace TP_4
             rbAgua.Checked = false;
             lblRenglones.Text = "";
             txtTotal.Text = "";
+        }
+
+        private void LimpiarSeleccion()
+        {
+            rbSimple.Checked = false;
+            rbDoble.Checked = false;
+            rbTriple.Checked = false;
+            cbLechuga.Checked = false;
+            cbTomate.Checked = false;
+            cbBacon.Checked = false;
+            cbSalsa.Checked = false;
+            cbPepino.Checked = false;
+            rbCoca.Checked = false;
+            rbFanta.Checked = false;
+            rbSprite.Checked = false;
+            rbAgua.Checked = false;
         }
 
         private void NuevoPedido()
@@ -149,6 +175,7 @@ namespace TP_4
         {
             lblRenglones.Text = pedido.MuestraPedidos();
         }
+
 
         #endregion
 

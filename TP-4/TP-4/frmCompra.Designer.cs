@@ -143,6 +143,7 @@
             this.paPedido.Controls.Add(this.btAceptar);
             this.paPedido.Controls.Add(this.panel4);
             this.paPedido.Controls.Add(this.panel5);
+            this.paPedido.Enabled = false;
             this.paPedido.Location = new System.Drawing.Point(6, 90);
             this.paPedido.Name = "paPedido";
             this.paPedido.Size = new System.Drawing.Size(616, 163);
@@ -403,6 +404,7 @@
             this.paRenglones.Controls.Add(this.txtTotal);
             this.paRenglones.Controls.Add(this.label14);
             this.paRenglones.Controls.Add(this.lblRenglones);
+            this.paRenglones.Enabled = false;
             this.paRenglones.Location = new System.Drawing.Point(6, 270);
             this.paRenglones.Name = "paRenglones";
             this.paRenglones.Size = new System.Drawing.Size(616, 183);
@@ -416,6 +418,7 @@
             this.btReiniciar.TabIndex = 7;
             this.btReiniciar.Text = "Reiniciar";
             this.btReiniciar.UseVisualStyleBackColor = true;
+            this.btReiniciar.Click += new System.EventHandler(this.btReiniciar_Click);
             // 
             // txtTotal
             // 
