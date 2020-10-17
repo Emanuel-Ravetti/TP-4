@@ -70,22 +70,22 @@ namespace BA
 
             if (Coca == true)
             {
-                Linea = Linea + "Coca |\r \n";
+                Linea = Linea + "Coca |";
             }
             else if (Fanta == true)
             {
-                Linea = Linea + "Fanta |\r \n";
+                Linea = Linea + "Fanta |";
             }
             else if (Sprite == true)
             {
-                Linea = Linea + "Sprite |\r \n";
+                Linea = Linea + "Sprite |";
             }
             else if (Agua == true)
             {
-                Linea = Linea + "Agua |\r \n";
+                Linea = Linea + "Agua |";
             }
 
-            return Linea;
+            return Linea + "\r \n";
 
         }
         #endregion

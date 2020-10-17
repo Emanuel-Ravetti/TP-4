@@ -36,76 +36,91 @@ namespace TP_4
             LimpiarControles();
             NuevoPedido();
             txtFecha.Text = pedido.Fecha.ToString("dd/MM/yyyy");
-            //todo: show nro pedido
+            
 
         }
         private void btAceptar_Click(object sender, EventArgs e)
         {
             rngPedido = new RngPedido();
             //seleccion de hamburguesa
-            if (rbSimple.Checked == true)
+            if(rbSimple.Checked == false & rbDoble.Checked == false & rbTriple.Checked == false)
             {
-                rngPedido.Hamburguesa = 160;
+                MessageBox.Show("No seleccionó hamburguesa", "Error");
             }
-            else if (rbDoble.Checked == true)
+            else
             {
-                rngPedido.Hamburguesa = 190;
-            }
-            else if (rbTriple.Checked == true)
-            {
-                rngPedido.Hamburguesa = 220;
-            }
-            
-            //seleccion de toppings
-            if (cbLechuga.Checked == true)
-            {
-                rngPedido.Lechuga = true;
-            }
-            if (cbTomate.Checked == true)
-            {
-                rngPedido.Tomate = true;
-            }
-            if (cbBacon.Checked==true)
-            {
-                rngPedido.Bacon = true;
-            }
-            if (cbSalsa.Checked == true)
-            {
-                rngPedido.Salsa = true;
-            }
-            if (cbPepino.Checked == true)
-            {
-                rngPedido.Pepinillos = true;
-            }
+                if (rbSimple.Checked == true)
+                {
+                    rngPedido.Hamburguesa = 160;
+                }
+                else if (rbDoble.Checked == true)
+                {
+                    rngPedido.Hamburguesa = 190;
+                }
+                else if (rbTriple.Checked == true)
+                {
+                    rngPedido.Hamburguesa = 220;
+                }
 
-            //seleccion de bebida
-            if (rbCoca.Checked == true)
-            {
-                rngPedido.Coca = true;
-                rngPedido.Bebida = 60;
-            }
-            else if (rbFanta.Checked == true)
-            {
-                rngPedido.Fanta = true;
-                rngPedido.Bebida = 60;
-            }
-            else if (rbSprite.Checked == true)
-            {
-                rngPedido.Sprite = true;
-                rngPedido.Bebida = 60;
-            }
-            else if (rbAgua.Checked == true)
-            {
-                rngPedido.Agua = true;
-                rngPedido.Bebida = 40;
-            }
 
-            pedido.AddRngPedido(rngPedido);
+                //seleccion de toppings
+                if (cbLechuga.Checked == true)
+                {
+                    rngPedido.Lechuga = true;
+                }
+                if (cbTomate.Checked == true)
+                {
+                    rngPedido.Tomate = true;
+                }
+                if (cbBacon.Checked == true)
+                {
+                    rngPedido.Bacon = true;
+                }
+                if (cbSalsa.Checked == true)
+                {
+                    rngPedido.Salsa = true;
+                }
+                if (cbPepino.Checked == true)
+                {
+                    rngPedido.Pepinillos = true;
+                }
 
-            txtTotal.Text = pedido.Total.ToString();
+                //seleccion de bebida
+                if (rbCoca.Checked == true)
+                {
+                    rngPedido.Coca = true;
+                    rngPedido.Bebida = 60;
+                }
+                else if (rbFanta.Checked == true)
+                {
+                    rngPedido.Fanta = true;
+                    rngPedido.Bebida = 60;
+                }
+                else if (rbSprite.Checked == true)
+                {
+                    rngPedido.Sprite = true;
+                    rngPedido.Bebida = 60;
+                }
+                else if (rbAgua.Checked == true)
+                {
+                    rngPedido.Agua = true;
+                    rngPedido.Bebida = 40;
+                }
 
-            MuestraPedidos();
-            LimpiarSeleccion();
+                try
+                {
+                    pedido.AddRngPedido(rngPedido);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Alcanzó el máximo de pedidos", "Error");
+                }
+
+                txtTotal.Text = pedido.Total.ToString();
+
+                MuestraPedidos();
+                LimpiarSeleccion();
+            }           
 
         }
         private void btReiniciar_Click(object sender, EventArgs e)
@@ -153,6 +168,7 @@ namespace TP_4
         private void NuevoPedido()
         {
             pedido = new Pedido();
+            txtCliente.Text = pedido.NumeroCliente.ToString();
         }
 
         private void LimpiarOpciones()
@@ -175,8 +191,6 @@ namespace TP_4
         {
             lblRenglones.Text = pedido.MuestraPedidos();
         }
-
-
         #endregion
 
 
