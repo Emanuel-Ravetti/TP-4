@@ -60,12 +60,12 @@
             this.rbSprite = new System.Windows.Forms.RadioButton();
             this.rbFanta = new System.Windows.Forms.RadioButton();
             this.rbCoca = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.paRenglones = new System.Windows.Forms.Panel();
             this.btReiniciar = new System.Windows.Forms.Button();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.lblRenglones = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.paEncabezado.SuspendLayout();
             this.paPedido.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -421,6 +421,14 @@
             this.rbCoca.Text = "Coca-Cola";
             this.rbCoca.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Location = new System.Drawing.Point(207, 13);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(121, 136);
+            this.panel1.TabIndex = 29;
+            // 
             // paRenglones
             // 
             this.paRenglones.BackColor = System.Drawing.Color.Transparent;
@@ -473,14 +481,6 @@
             this.lblRenglones.Name = "lblRenglones";
             this.lblRenglones.Size = new System.Drawing.Size(0, 13);
             this.lblRenglones.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Location = new System.Drawing.Point(207, 13);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(121, 136);
-            this.panel1.TabIndex = 29;
             // 
             // frmCompra
             // 
