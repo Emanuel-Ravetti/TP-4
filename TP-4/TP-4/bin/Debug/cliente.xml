@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <NumeroCliente>
+    <lista>4</lista>
+  </NumeroCliente>
+  <NumeroCliente>
+    <lista>0</lista>
+  </NumeroCliente>
+</DocumentElement>

@@ -17,6 +17,7 @@ namespace TP_4
         #region PROPIEDADES
         Pedido pedido;
         RngPedido rngPedido;
+        Contador contador = new Contador();
         #endregion
 
         #region CONSTRUCTOR
@@ -36,6 +37,7 @@ namespace TP_4
             LimpiarControles();
             NuevoPedido();
             txtFecha.Text = pedido.Fecha.ToString("dd/MM/yyyy");
+            txtCliente.Text = contador.ContadorCliente().ToString();
             
 
         }
@@ -168,23 +170,7 @@ namespace TP_4
         private void NuevoPedido()
         {
             pedido = new Pedido();
-            txtCliente.Text = pedido.NumeroCliente.ToString();
-        }
-
-        private void LimpiarOpciones()
-        {
-            rbSimple.Checked = false;
-            rbDoble.Checked = false;
-            rbTriple.Checked = false;
-            cbLechuga.Checked = false;
-            cbTomate.Checked = false;
-            cbBacon.Checked = false;
-            cbSalsa.Checked = false;
-            cbPepino.Checked = false;
-            rbCoca.Checked = false;
-            rbFanta.Checked = false;
-            rbSprite.Checked = false;
-            rbAgua.Checked = false;
+            
         }
 
         private void MuestraPedidos()

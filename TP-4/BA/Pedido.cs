@@ -9,13 +9,10 @@ namespace BA
     {
         #region PROPIEDADES
         public DateTime Fecha;
-        public int NumeroCliente = 0;
         public int Total = 0;
 
         public RngPedido[] ListaPedido = new RngPedido[5];
         private int indice = 0;
-
-        //DataTable numeroCliente = new DataTable();
 
         public bool flag = false;
         #endregion
@@ -24,10 +21,6 @@ namespace BA
         public Pedido()
         {
             Fecha = DateTime.Now;
-            //todo: numeroCliente.TableName = "";
-            //numeroCliente.Columns.Add("", typeof(int));
-            //numeroCliente.Rows.Add();
-            //numeroCliente.Rows[0][0] = numeroCliente.ReadXml(@"NumeroCliente.xml");
             flag = false;
         }
         #endregion
