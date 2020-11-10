@@ -19,9 +19,9 @@ namespace BA
             cliente.Columns.Add("lista", typeof(int));
             if (!System.IO.File.Exists(@"cliente.xml"))
             {
+                cliente.WriteXml(@"cliente.xml");
                 cliente.Rows.Add();
                 cliente.Rows[0][0] = 0;
-                cliente.WriteXml(@"cliente.xml");
             }
             cliente.ReadXml(@"cliente.xml");
         }

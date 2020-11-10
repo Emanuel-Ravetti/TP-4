@@ -1,9 +1,6 @@
 <?xml version="1.0" standalone="yes"?>
 <DocumentElement>
   <NumeroCliente>
-    <lista>8</lista>
-  </NumeroCliente>
-  <NumeroCliente>
-    <lista>0</lista>
+    <lista>3</lista>
   </NumeroCliente>
 </DocumentElement>
